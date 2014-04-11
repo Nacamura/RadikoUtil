@@ -7,7 +7,7 @@ class Radiko
 	end
 
 	def call
-		system("./radiko_prep.sh #{@channel} #{@duration} #{@start_time} #{@file_name} &")
+		system("./Radiko.sh #{@channel} #{@duration} #{@start_time} #{@file_name} &")
 	end
 
 end
