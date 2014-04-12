@@ -3,11 +3,11 @@
 
 pid=$$
 playerurl=http://radiko.jp/player/swf/player_4.0.0.00.swf
-playerfile="./rtmp_temp/player.swf"
-keyfile="./rtmp_temp/authkey.png"
-logpath="./rtmp_temp/rtmp.log"
+playerfile="./rtmp/player.swf"
+keyfile="./rtmp/authkey.png"
+logpath="./rtmp/rtmp.log"
  
-outdir="./rtmp_temp"
+outdir="./rtmp"
  
 if [ $# -le 1 ]; then
   echo "usage : $0 channel_name duration(minuites) [start_time] [file_name]"
