@@ -7,7 +7,7 @@ playerfile="./rtmp/player.swf"
 keyfile="./rtmp/authkey.png"
 logpath="./rtmp/rtmp.log"
  
-outdir="./rtmp"
+outdir="."
  
 if [ $# -le 1 ]; then
   echo "usage : $0 channel_name duration(minuites) [start_time] [file_name]"

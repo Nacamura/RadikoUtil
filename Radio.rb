@@ -1,0 +1,26 @@
+class Radio
+	def initialize(type, channel, duration, start_time, file_name)
+		@type = type
+		@channel = channel
+		@duration = duration
+		@start_time = start_time
+		@file_name = file_name
+	end
+
+	def call
+		shell = get_shell_name
+		system("#{shell} #{@channel} #{@duration} #{@start_time} #{@file_name} &")
+	end
+
+	def get_shell_name
+		case(@type)
+		when "Radiko"
+			"./rtmp/Radiko.sh"
+		when "Rajiru"
+			"./mplayer/Rajiru.sh"
+		when "AandG"
+			"./rtmp/AandG.sh"
+		end
+	end
+
+end
