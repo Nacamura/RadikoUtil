@@ -23,4 +23,8 @@ class Radio
 		end
 	end
 
+	def self.temp_schedule(lines)
+		params = lines.drop(2).map(&:strip)
+		Radio.new(*params).call
+	end
 end
